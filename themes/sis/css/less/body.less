@@ -1,0 +1,239 @@
+/* -- body.less	----------------------------------------------- */
+
+	/*	author: team half cut	*/
+	/*	project: sussex interpreting services	*/
+	/*	start date: 22/10/2011	*/
+	
+	/*	please comment any modifications with your name and the date modified.	*/		
+
+/* -------------------------------------------------------------- */
+
+
+/* -- homepage welcome note ----------------------------------------------- */
+
+.region-home-page-welcome {
+	padding: 2em 0;
+	background: url("@{base-url}/02body/bdrSection.png") top left repeat-x;
+  
+  h2 {
+  	font-family: @headlineFont;
+  	text-align: center;
+  }
+  
+  p {
+  	text-align: center;
+  }
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- homepage blockquote ----------------------------------------------- */
+
+.region-home-page-testamonial {
+	background: url("@{base-url}/02body/bdrSection.png") top left repeat-x;
+  padding: 1.5em 0em 0 2em;
+  
+  blockquote {
+		background: url("@{base-url}/02body/quoteMarkLeft.png") top left no-repeat;
+		border: none;
+		margin: 0;
+		padding: 1em 1em 0.5em 1em;
+		
+		p {
+			background: url("@{base-url}/02body/quoteMarkRight.png") bottom right no-repeat;
+			font-weight: normal;
+			text-align: center;
+			.textShadowIndentLight;
+			color: @secondaryColor;
+			margin: 0;
+			padding: 1em 3.5em;
+		}  
+  }
+  
+  	  p {
+	  	text-align: center;
+	  
+		   cite {
+		  	font-weight: bold;
+		  	font-size: 80%;
+		  	text-align: center;
+		  	color: @primaryColor;
+
+		  }
+	  }  
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- aside left ----------------------------------------------- */
+
+aside.main-sidebar {
+
+	h2 {
+		text-transform: capitalize;
+		color: @secondaryColorDark;
+	}
+	
+	.menu-block-wrapper {
+		margin: 0 0 3.5em 0;
+	}
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- sidemenu ----------------------------------------------- */
+
+.main-sidebar {
+
+	.region-sidebar-first {
+	
+		h2 {
+			background: url("@{base-url}/02body/bdrSection.png") bottom left repeat-x;
+		}
+	
+	}
+
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- user login form ----------------------------------------------- */
+
+#user-login-form {
+	margin: 0 0 3.5em 0;
+	
+	input#edit-name, input#edit-pass {
+		width: 80%;
+	}
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- calendar ----------------------------------------------- */
+
+.view-events-calendar {
+
+	.view-header {
+	
+		.date-nav-wrapper {
+		
+			.date-heading {
+				text-align: left;
+			}
+		
+			.date-nav {
+			
+				.date-prev {
+					position: absolute;
+					right: 30px;
+					top: 5px;
+					min-height: 20px;
+					
+					span {
+						a {
+							font-size: 140%;
+							padding-bottom: 0.5em;
+							padding-right: 0.25em;
+							&:hover {
+								color: @secondaryColor;
+								background: none;
+							}
+						}
+					}
+				}
+				
+				.date-next {
+					position: absolute;
+					right: 0px;
+					top: 5px;
+					min-height: 20px;
+					
+					span {
+						a {
+							font-size: 140%;
+							padding-bottom: 0.5em;
+							padding-right: 0.25em;
+							margin-right: 0.4em;
+							&:hover {
+								color: @secondaryColor;
+								background: none;
+							}
+						}
+					}
+				}
+			}		
+		}
+	}
+}
+
+div.calendar-calendar div.month-view table.mini tr th {
+	font-size: 200%;
+}
+
+table tbody tr div.month {
+	font-size: 160%;
+}
+.calendar-calendar .mini-day-off {
+	padding: 3px 0;
+}
+.calendar-calendar tbody {
+	padding: 5px;
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- search results ----------------------------------------------- */
+
+ol.search-results {
+	list-style: decimal;
+	
+	.search-snippet-info {
+		padding: 0;
+	}
+}
+
+#search-form input#edit-submit {
+	margin: 1em 0 1em 0;
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- blogs ----------------------------------------------- */
+
+.node-blog ul.inline li {
+	display: block;
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- contact form ----------------------------------------------- */
+
+#contact-site-form .form-textarea-wrapper textarea {
+	width: 93%;
+}
+
+input#edit-subject.form-text.required, input#edit-mail.form-text.required, input#edit-name.form-text.required {
+	width: 90%;
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- pagination ----------------------------------------------- */
+
+ul.pager li a:hover {
+	text-decoration: none;
+	background: @primaryColorLight;
+}
+
+/* -------------------------------------------------------------- */
+
+

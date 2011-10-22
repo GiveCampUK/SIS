@@ -1,0 +1,54 @@
+/*-- Define sidebar width --*/
+@sidebar-width:22%;
+
+#main-page-wrapper {
+	&.main-layout-area {}
+	#main-content-container {
+		.main-sidebar {
+			width:@sidebar-width;
+			padding:0;
+			margin:0;
+			font-size:70%;
+			/*-- To make IE play nicely --*/
+			display:inline;
+			&.first-side {
+				float:left;
+				padding-right:1em;
+				}
+			&.second-side {
+				float:right;
+				padding-left:1em;
+				}
+			.region {}
+			.region-sidebar-first {
+				}
+			.region-sidebar-second {
+				}
+			}
+		.main-content-section {
+			/*-- To make IE play nicely --*/
+			display:inline;
+			.main-content-article {
+				&.with-no-cols {
+					margin:0;
+					}
+				&.with-left-col {
+					margin:0 0 0 (@sidebar-width + 2%);
+					border-left:1px solid #DDDDDD;
+					padding-left:1em;
+					}
+				&.with-right-col {
+					margin:0 (@sidebar-width + 2%) 0 0;
+					border-right:1px solid #DDDDDD;
+					padding-right:1em;
+					}
+				&.with-both-cols {
+					margin:0 (@sidebar-width + 2%);
+					border-right:1px solid #DDDDDD;
+					border-left: 1px solid #DDDDDD;
+					padding:0 1em;
+					}
+				}
+			}
+		}
+	}

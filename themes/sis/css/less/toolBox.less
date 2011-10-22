@@ -1,0 +1,173 @@
+/* -- toolBox.less	----------------------------------------------- */
+
+	/*	author: team half cut	*/
+	/*	project: sussex interpreting services	*/
+	/*	start date: 22/10/2011	*/
+	
+	/*	think of this less file as a toolbox containing variables, mixins, operations and functions ? find out more @ http://lesscss.org/	*/
+	
+	/*	please comment any modifications with your name and the date modified.	*/		
+
+/* -------------------------------------------------------------- */
+
+
+/* -- base string url for images ----------------------------------------------- */
+
+	@base-url: "../images/";
+	/* here is an example...background: url("@{base-url}/images/bg.png"); */
+
+/* -------------------------------------------------------------- */
+
+
+/* -- website fonts ----------------------------------------------- */
+
+	@defaultFont: sans-serif;
+	@headlineFont: 'Merriweather', georgia, serif;
+	@bodyFont: 'Open Sans', sans-serif;
+
+/* -------------------------------------------------------------- */
+
+
+/* -- website colors ----------------------------------------------- */
+
+/* -- colors -- */
+
+	@baseColor: #e7e7e8; /* -- warm white -- */
+	
+		@baseColorLight: lighten(@baseColor, 100%); /* -- brilliant white -- */
+	
+		@baseColorDark: darken(@baseColor, 20%); /* -- dirty white -- */
+	
+	@primaryColor: #79A02A; /* -- absinthe green -- */
+		
+		@primaryColorLight: lighten(@primaryColor, 50%);
+				
+		@primaryColorDark: darken(@primaryColor, 20%);
+	
+		@primaryColorBackground: lighten(@primaryColor, 70%);
+				
+	@secondaryColor: #5b5966; /* -- cool grey -- */
+		
+		@secondaryColorLight: lighten(@secondaryColor, 20%);
+			
+		@secondaryColorDark: darken(@secondaryColor, 20%);
+		
+	@tertiaryColor: #0093d0; /* -- sky blue -- */
+		
+		@tertiaryColorLight: lighten(@tertiaryColor, 20%);
+			
+		@tertiaryColorDark: darken(@tertiaryColor, 10%);
+		
+		@tertiaryColorSuperLight: lighten(@tertiaryColor, 50%);
+		
+/* -------------- */
+
+/* -------------------------------------------------------------- */
+
+/* -- rounded corners ----------------------------------------------- */
+
+.roundedCorners (@radius: 0.35em) {
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+	-webkit-background-clip: padding-box;
+}
+	
+/* -------------------------------------------------------------- */
+
+
+/* -- borders ----------------------------------------------- */
+
+.bordered {
+  border: 1px solid @primaryColor;
+}
+
+.borderedLight {
+  border: 1px solid @primaryColorLight;
+}
+
+.borderedHover {
+  border: 1px solid @secondaryColor;
+}
+
+.borderedTopBottom {
+  border-top: 1px dotted @primaryColor;
+  border-bottom: 1px dotted @primaryColor;
+}
+
+.borderedLeftRight {
+  border-left: 1px solid @primaryColor;
+  border-right: 1px solid @primaryColor;
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- box shadow ----------------------------------------------- */
+
+.boxShadowSoft(@x: 0, @y: 0em, @blur: 10px, @spread:0, @color: #333740) {
+	-webkit-box-shadow: @x @y @blur @spread @color;
+	-moz-box-shadow: @x @y @blur @spread @color;	
+	box-shadow: @x @y @blur @spread @color;	
+}
+
+.boxShadowHard(@x: 0, @y: 1px, @blur: 1px, @spread:0, @color: #7b7b7b) {
+	-webkit-box-shadow:@x @y @blur @spread @color;
+	-moz-box-shadow:@x @y @blur @spread @color;	
+	box-shadow:@x @y @blur @spread @color;	
+}
+
+.boxShadowIndent(@x: 0, @y: 1px, @blur: 0px, @spread:0, @color: #ffffff) {
+	-webkit-box-shadow:@x @y @blur @spread @color;
+	-moz-box-shadow:@x @y @blur @spread @color;	
+	box-shadow:@x @y @blur @spread @color;	
+}
+
+.boxShadowInset {
+	-webkit-box-shadow: inset 1px 0 5px #461547;
+	-moz-box-shadow: inset 1px 0 5px #461547;
+	box-shadow: inset 1px 0 5px #461547;
+}
+	
+/* -------------------------------------------------------------- */
+
+
+/* -- text shadow ----------------------------------------------- */
+
+.textShadow {
+  text-shadow: 0px 1px 0px #000000;
+}
+	
+.textShadowIndentDark {
+  text-shadow: 0px -1px 0px #585858;
+}
+
+.textShadowIndentLight {
+  text-shadow: 0px 1px 0px #ffffff;
+}
+	
+/* -------------------------------------------------------------- */
+
+
+/* -- element box model reset ----------------------------------------------- */
+
+.boxModelReset {
+	margin:0;
+	padding:0;
+}
+	
+/* -------------------------------------------------------------- */
+
+
+/* --  icon variables----------------------------------------------- */
+
+/* -- feed manager icons -- */
+
+@rss-favicon:16px;
+@twitter-favicon:32px;
+
+/* -------------- */
+
+/* -------------------------------------------------------------- */
+	

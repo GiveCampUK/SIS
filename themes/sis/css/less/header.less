@@ -1,0 +1,178 @@
+/* -- header.less	----------------------------------------------- */
+
+	/*	author: team half cut	*/
+	/*	project: sussex interpreting services	*/
+	/*	start date: 22/10/2011	*/
+	
+	/*	please comment any modifications with your name and the date modified.	*/		
+
+/* -------------------------------------------------------------- */
+
+
+/* -- header ----------------------------------------------- */
+
+#main-site-header {
+	.borderedLeftRight;
+	background: #f7f7f7;
+	min-height: 10.5em;
+  position: relative;
+}
+
+/* -- branding -- */
+
+#site-logo {
+  background: url("@{base-url}/01header/logo.png") top left no-repeat;
+  float: left;
+  width: 185px;
+  height: 112px;
+  overflow: hidden;
+  text-indent: -3000px;
+  margin: 20px 0; 
+}
+
+/* -------------- */
+
+/* -- header buttons -- */
+#header-boxes {
+	float: right;
+	margin: 3em 0 0 0;
+  
+	.header-box {
+	  float: left;
+	  padding: 0px;
+	  margin: 0 0 0 2em;
+	}
+	
+	.headerBoxOne {
+	
+		.region-header-box-left {
+			background: #b5d27b;
+			border: 1px solid @primaryColorDark;
+		  width: 10em;
+		  margin-top: 1em;
+			padding: 1px;
+			.roundedCorners;
+			.boxShadowHard;
+			
+			p {
+				line-height: 135%;
+				text-align: center;
+				background: #7ea42f url("@{base-url}/02body/btnBgGreen.png") top left repeat-x;
+				margin: 0;
+				padding: 0.75em 1em;
+				
+				a {
+					color: @baseColorLight;
+					text-decoration: none;
+					.textShadowIndentDark;
+					&:hover {
+						text-decoration: underline;
+						background: none;
+					}
+				}			
+			}
+		}
+	}
+	
+	.headerBoxTwo {
+	
+			.region-header-box-middle {
+			background: @tertiaryColorLight;
+			border: 1px solid @tertiaryColorDark;
+		  width: 8em;
+		  margin-top: 1em;
+			padding: 1px;
+			.roundedCorners;
+			.boxShadowHard;
+			
+			p {
+				line-height: 135%;
+				text-align: center;
+				background: #0093d0 url("@{base-url}/02body/btnBgBlue.png") top left repeat-x;
+				margin: 0;
+				padding: 0.75em 1em;
+				
+				a {
+					color: @baseColorLight;
+					text-decoration: none;
+					.textShadowIndentDark;
+					&:hover {
+						text-decoration: underline;
+						background: none;
+					}
+				}			
+			}
+		}
+	}
+	
+	.headerBoxThree {
+		margin-top: -1.5em;
+			
+			a {
+		  background: url("@{base-url}/01header/customerServiceExecellenceLogo.png") top right no-repeat;
+		  display: block;
+		  width: 79px;
+		  height: 121px;
+		  &:hover {
+		  	opacity: 0.7;
+		  }
+		}	
+	}
+}
+
+/* -------------- */
+
+/* -- search function -- */
+
+.region-top-tab {
+  position: absolute;
+  top: 0;
+  right: 10em;
+	.boxShadowIndent;
+	
+	form {
+	  
+	  box-shadow: 0 1px 1px white;
+	  
+	  div {
+	    margin: 0;
+	    padding: 0;
+	  }
+	  
+	  h2 {
+	    display: none;
+	  }
+		
+		input[type="text"] {
+		  width: 255px;
+		  border: solid 1px #cdcdcd;
+		  border-top: none;
+		  background: #e3e2e2;
+		  box-shadow: inset 0 0 4px #cdcdcd;
+		  vertical-align: middle;
+		  padding: 5px 12px 6px;
+		  font-size: 1.4em;
+		  margin: 0;
+		  text-shadow: 0 1px 0 white;
+		  border-radius: 0 0 0 4px;
+		}
+		
+		input::-webkit-input-placeholder,
+		input::-moz-placeholder { 
+      color: #bbb; 
+      text-shadow: 0 1px 0 white; 
+    }
+	
+		input[type="image"] {
+		  vertical-align: middle;
+		  margin: 0 0 0 -4px;
+		  padding: 0;
+		}
+		
+	}
+}
+
+
+/* -------------- */
+
+/* -------------------------------------------------------------- */

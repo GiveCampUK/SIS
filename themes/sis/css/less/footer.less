@@ -1,0 +1,100 @@
+/* -- footer.less	----------------------------------------------- */
+
+	/*	author: team half cut	*/
+	/*	project: sussex interpreting services	*/
+	/*	start date: 22/10/2011	*/
+	
+	/*	please comment any modifications with your name and the date modified.	*/		
+
+/* -------------------------------------------------------------- */
+
+
+/* -- footer ----------------------------------------------- */
+
+#main-site-footer {
+  color: white;
+  
+  .main-layout-area {
+  	.boxModelReset;
+  }
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- copyright ----------------------------------------------- */
+
+#main-site-footer {
+	font-size: 85%;
+	min-height: 42px;
+	.boxModelReset;
+	width: 980px;
+	margin: 0 auto;
+	
+	p {
+		color: @baseColorLight;
+		.textShadowIndentDark;
+		background: @primaryColor url("@{base-url}/03footer/bgFooter.png") top left repeat-x;
+		border: 1px solid #5f7d23;
+		margin: 0;
+		padding: 0.95em 3em;
+	}
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- social links ----------------------------------------------- */
+
+ul.socialLinks {
+	float: right;
+	display: block;
+	margin-right: 3em;
+	
+	li {
+		float: left;
+		display: inline;
+		margin-left: 1em;
+		padding: 1em 0;
+		
+		a {
+			display: block;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+	
+	li.facebook a {
+		background: url("@{base-url}/03footer/iconFacebook.png") top left no-repeat;
+		width: 16px;
+		height: 17px;
+	}
+
+	li.twitter a {
+		background: url("@{base-url}/03footer/iconTwitter.png") top left no-repeat;
+		width: 16px;
+		height: 17px;
+	}
+	
+	li.youTube a {
+		background: url("@{base-url}/03footer/iconYouTube.png") top left no-repeat;
+		width: 16px;
+		height: 17px;
+	}
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- bottom shadow ----------------------------------------------- */
+
+#bottomShadow {
+	background: url("@{base-url}/03footer/shadowMainContainer.png") top left no-repeat;
+	height: 23px;
+	width: 980px;
+	display: block;
+	margin: 0 auto;
+}
+
+/* -------------------------------------------------------------- */

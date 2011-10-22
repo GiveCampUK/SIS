@@ -1,0 +1,30 @@
+
+name = SIS
+description = Custom theme for SIS
+package = Core
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = css/style.css
+
+regions[header] = Header
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+
+regions[featured] = Featured
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+
+regions[top_tab] = Top Tabs
+regions[header_box] = Header boxes
+
+regions[slideshow] = Home page slide show
+regions[home_page_banner] = Home page banner
+regions[home_page_welcome] = Home page welcome text
+regions[home_page_testamonial] = Home page testamonial
+regions[header_box_left] = Header box first
+regions[header_box_middle] = Header box second
+regions[header_box_right] = Header box third

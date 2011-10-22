@@ -1,0 +1,117 @@
+#home-page-banner-wrap {
+	margin:0.5em 0 0 -20px;
+	padding:0 0 0.5em 20px;
+	position:relative;
+	.region-slideshow {
+		width:58%;
+		float:left;
+		}
+	}
+	
+/* -- slideshow -- */
+
+.home-page-slide {
+  width: 100%;
+}
+	
+.region-slideshow {
+	overflow-x:visible;
+	border:solid 1px #CCCCCC;
+	.home-page-slide {
+		overflow-x:visible;
+		//overflow-y:hidden;
+		height:350px;
+		width: 100%;
+		padding:0 0 1px 0;
+		.slide-image {
+			overflow:hidden;
+			height:350px;
+			img {
+				width:auto;
+				height:100%;
+				border:none;
+				}
+			}
+		}
+	}
+	
+	h2.welcome-ribbon {
+		background: url("@{base-url}02body/ribbonBannerBg.png") repeat-x top left;
+		position:absolute;
+		margin:0.8em 40px 0 -2px;
+		padding:0.3em 1em 0 0;
+		min-height:38px;
+		z-index:200;
+		font-size:135%;
+		font-weight:bold;
+		color:#FFFFFF;
+		text-shadow:0 -1px 1px darken(@primaryColor,30%);
+		span.left-edge {
+			background: url("@{base-url}02body/ribbonBannerEdge.png") no-repeat top left;
+			position:absolute;
+			display:block;
+			top:0;
+			left:-20px;
+			width:20px;
+			height:49px;
+			}
+    	span.tail {
+    		background: url("@{base-url}02body/ribbonBannerTail.png") no-repeat top left;
+    		position:absolute;
+			display:block;
+			top:0;
+			right:-12px;
+			width:13px;
+			height:38px;
+    		}
+    	}
+    	
+#slideshow-controls {
+	position:absolute;
+	bottom:10px;
+	left:10px;
+	input[type="button"]#slideshow-prev {}
+	input[type="button"]#slideshow-play {}
+	input[type="button"]#slideshow-next {}
+	}
+	
+.region-home-page-banner {
+	width:40%;
+	margin:0 0 0 1%;
+	border:1px solid #CCCCCC;
+	border-bottom:none;
+	float:left;
+	#language-list {
+		padding:0;
+		margin:0;
+		list-style-type:none;
+		li {
+			padding:0;
+			margin:0;
+			background:#F1F1F1;
+			a {
+				padding:2px 0 2px 0.7em;
+				margin:0;
+				display:block;
+				text-decoration:none;
+				line-height:0.8em;
+				background:#F1F1F1;
+				border-bottom:1px solid #D5D5D5;
+				border-top:1px solid #FFFFFF;
+				overflow:hidden;
+				&:hover {
+					background: url("@{base-url}02body/iconArrow.png") no-repeat 98% center;
+					text-decoration:none;
+					}
+				img {
+					padding:0;
+					margin:0;
+					border:none;
+					height:auto;
+					width:90%;
+					}
+				}
+			}
+		}
+	}
+

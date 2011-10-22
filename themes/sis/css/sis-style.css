@@ -1,0 +1,349 @@
+@charset "utf-8";
+html {
+  margin: 0;
+  padding: 0;
+  background: #999999;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: red;
+}
+/*---- KR's Toolbox ----*/
+/* -- toolBox.less	----------------------------------------------- */
+/*	author: team half cut	*/
+/*	project: sussex interpreting services	*/
+/*	start date: 22/10/2011	*/
+/*	think of this less file as a toolbox containing variables, mixins, operations and functions ? find out more @ http://lesscss.org/	*/
+/*	please comment any modifications with your name and the date modified.	*//* -------------------------------------------------------------- */
+/* -- base string url for images ----------------------------------------------- */
+/* here is an example...background: url("@{base-url}/images/bg.png"); */
+/* -------------------------------------------------------------- */
+/* -- website fonts ----------------------------------------------- */
+/* -------------------------------------------------------------- */
+/* -- website colors ----------------------------------------------- */
+/* -- colors -- */
+/* -- warm white -- */
+/* -- brilliant white -- */
+/* -- dirty white -- */
+/* -- absinthe green -- */
+/* -- cool grey -- */
+/* -------------- */
+/* -------------------------------------------------------------- */
+/* -- rounded corners ----------------------------------------------- */
+/* -------------------------------------------------------------- */
+/* -- borders ----------------------------------------------- */
+.bordered {
+  border: 1px solid #88b233;
+}
+.borderedLight {
+  border: 1px solid #f4f9eb;
+}
+.borderedHover {
+  border: 1px solid #5b5966;
+}
+.borderedTopBottom {
+  border-top: 1px dotted #88b233;
+  border-bottom: 1px dotted #88b233;
+}
+.borderedLeftRight {
+  border-left: 1px solid #88b233;
+  border-right: 1px solid #88b233;
+}
+/* -------------------------------------------------------------- */
+/* -- box shadow ----------------------------------------------- */
+.boxShadowInset {
+  -webkit-box-shadow: inset 1px 0 5px #461547;
+  -moz-box-shadow: inset 1px 0 5px #461547;
+  box-shadow: inset 1px 0 5px #461547;
+}
+/* -------------------------------------------------------------- */
+/* -- text shadow ----------------------------------------------- */
+.textShadow {
+  text-shadow: 0px 1px 0px #000000;
+}
+.textShadowIndentDark {
+  text-shadow: 0px -1px 0px #000000;
+}
+.textShadowIndentLight {
+  text-shadow: 0px 1px 0px #ffffff;
+}
+/* -------------------------------------------------------------- */
+/* -- element box model reset ----------------------------------------------- */
+.boxModelReset {
+  margin: 0;
+  padding: 0;
+}
+/* -------------------------------------------------------------- */
+/* --  icon variables----------------------------------------------- */
+/* -- feed manager icons -- */
+/* -------------- */
+/* -------------------------------------------------------------- *//*---- Structure ----*/
+/* -- structure.less	----------------------------------------------- */
+/*	author: team half cut	*/
+/*	project: sussex interpreting services	*/
+/*	start date: 22/10/2011	*/
+/*	please comment any modifications with your name and the date modified.	*//* -------------------------------------------------------------- */
+/* -- reset ----------------------------------------------- */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* -------------------------------------------------------------- */
+/* -- global structure ----------------------------------------------- */
+html {
+  font: normal 0.85em/1em helvetica, Arial, sans-serif;
+  background: #e4e3e3;
+  min-height: 100%;
+}
+html body {
+  background: #e7e7e8 url("../images//02body/bgMain.png") top left repeat;
+}
+#all-content {
+  width: 960px;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+  box-shadow: 0 0 24px #777;
+}
+.main-layout-area {
+  padding: 5px 20px;
+}
+/* -------------------------------------------------------------- */
+/* -- header ----------------------------------------------- */
+#main-site-header {
+  position: relative;
+}
+.region-top-tab {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background: #88b233;
+  padding: 4px 12px;
+}
+#site-logo {
+  background: url(images/logo.png) no-repeat;
+  width: 185px;
+  height: 112px;
+  overflow: hidden;
+  text-indent: -3000px;
+  margin: 20px 0;
+}
+#header-boxes {
+  position: absolute;
+  right: 10px;
+  bottom: 40px;
+}
+.header-box {
+  float: left;
+  width: 140px;
+  border: solid 1px red;
+  padding: 20px;
+  margin: 0 10px;
+}
+/* -------------------------------------------------------------- */
+/* -- page: home page ----------------------------------------------- */
+#home-page-banner-wrap {
+  overflow: hidden;
+}
+/* -- slideshow -- */
+.region-slideshow {
+  width: 60%;
+  float: left;
+  border: solid 1px blue;
+}
+.home-page-slide {
+  border: solid 2px #efefef;
+  width: 100%;
+  height: 200px;
+}
+/* -------------- */
+/* -- banner -- */
+.region-home-page-banner {
+  width: 39%;
+  float: left;
+  border: solid 1px red;
+}
+.region-home-page-welcome {
+  border: solid 1px green;
+}
+.region-home-page-testamonial {
+  border: solid 1px purple;
+}
+/* -------------- */
+/* -------------------------------------------------------------- */
+/* -- page: content pages ----------------------------------------------- */
+#main-page-wrapper {
+  overflow: hidden;
+}
+#main-content-article {
+  padding: 0 40px 0 0;
+  border: solid 1px green;
+}
+#main-sidebar-first {
+  border: solid 1px red;
+}
+#main-sidebar-second {
+  border: solid 1px blue;
+}
+/* -------------------------------------------------------------- *//*---- Header ----*/
+/* -- header.less	----------------------------------------------- */
+/*	author: team half cut	*/
+/*	project: sussex interpreting services	*/
+/*	start date: 22/10/2011	*/
+/*	please comment any modifications with your name and the date modified.	*//* -------------------------------------------------------------- */
+/* -- navigation ----------------------------------------------- */
+#main-menu {
+  background-color: #88b233;
+}
+#main-menu-links {
+  overflow: hidden;
+}
+#main-menu-links li {
+  display: inline;
+}
+#main-menu-links li a {
+  display: block;
+  float: left;
+  color: white;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 8px 12px 10px;
+  text-decoration: none;
+}
+/* -------------------------------------------------------------- *//*---- Body ----*/
+/* -- body.less	----------------------------------------------- */
+/*	author: team half cut	*/
+/*	project: sussex interpreting services	*/
+/*	start date: 22/10/2011	*/
+/*	please comment any modifications with your name and the date modified.	*//* -------------------------------------------------------------- *//*---- Footer ----*/
+/* -- footer.less	----------------------------------------------- */
+/*	author: team half cut	*/
+/*	project: sussex interpreting services	*/
+/*	start date: 22/10/2011	*/
+/*	please comment any modifications with your name and the date modified.	*//* -------------------------------------------------------------- */
+/* -- footer ----------------------------------------------- */
+#main-site-footer {
+  background-color: #88b233;
+  color: white;
+}
+/* -------------------------------------------------------------- */
+/* -- copyright and givesocial footer ----------------------------------------------- */
+/* -------------------------------------------------------------- *//*---- Elements ----*/

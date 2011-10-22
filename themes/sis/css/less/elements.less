@@ -1,0 +1,371 @@
+/* -- links ----------------------------------------------- */
+
+a {
+	color:@primaryColor;
+	text-decoration:underline;
+	&:visited {
+		color:@primaryColorDark;
+		text-decoration:underline;
+		}
+	&:hover {
+		color:@baseColorLight;
+		background: @primaryColorDark;
+		text-decoration:none;
+		}
+	&:active {
+		color:@primaryColorDark;
+		text-decoration:none;
+		background: @baseColorLight;
+		}
+	}
+	
+/* -------------------------------------------------------------- */
+
+/* -- standard html elements ----------------------------------------------- */
+
+h1 {
+	font-size: 250%;
+	font-weight: bold;
+	color: @primaryColor;
+	margin: 0 0 0.5em 0;
+}
+	
+h2 {
+	font-size: 200%;
+	color: @primaryColor;
+	margin: 0.25em 0 0.5em 0;
+}
+
+	h2.main-headline {
+		font-size: 220%;
+		font-family: @headlineFont;
+		color: @primaryColorDark;
+		text-transform: capitalize;
+	}
+	
+h3 {
+	font-size: 200%;
+	line-height: 140%;
+	color: @primaryColor;
+	background: none;
+	margin: 0.25em 0 0.6em 0;
+}
+	
+h4 {
+	font-size: 190%;
+	font-weight: normal;
+	line-height: 145%;
+	color: @primaryColorDark;
+	margin: 0.25em 0 0.45em 0;
+}
+	
+h5 {
+	font-size: 160%;
+	font-weight: bold;
+	color: @secondaryColorDark;
+	margin: 0.75em 0 0.5em 0;
+}
+	
+h6 {
+	font-size: 150%;
+	font-weight: bold;
+	color: @primaryColor;	
+	margin: 0.8em 0 0.4em 0;
+}
+
+/* -------------------------------------------------------------- */
+
+/* -- standard body elements ----------------------------------------------- */
+
+p {
+	line-height: 150%;
+	.textShadowIndentLight;
+	color: @secondaryColor;
+	background: none;
+	margin: 0 0 0.75em 0;
+}
+
+b, strong { color: @primaryColorDark; }
+
+i, em {
+	font-size: 75%;
+	font-weight: bold;
+	font-style: italic;
+	color: @secondaryColorDark;
+}
+
+blockquote {}
+
+blockquote cite {}
+
+del, strike {}
+
+code {}
+
+ol, ul { background: none; }
+
+ol {}
+
+ul {}
+
+li { background: none; }
+
+img {}
+
+form {}
+
+fieldset {}
+
+label {}
+
+legend { white-space: normal; }
+
+table, caption, tbody, tfoot, thead, tr, th, td,
+
+datetime, time {}
+
+div.submitted {
+	font-weight: bold;
+	font-style: italic;
+	margin: 0 0 0.5em 0;
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- selection ----------------------------------------------- */
+
+::-moz-selection { background: @primaryColorDark; color: @baseColorLight; text-shadow: none; }
+::selection { background: @primaryColorDark; color: @baseColorLight; text-shadow: none; }
+
+/* -------------------------------------------------------------- */
+
+
+/* -- tables ----------------------------------------------- */
+
+table {
+	font-size: 100%;
+	color: @primaryColor;
+	.bordered;
+	background: none;
+	width: 100%;
+	margin: 1.2em 0;
+	
+	caption {
+		font-size: 90%;
+		font-style: italic;
+		text-align: left;
+		margin: 0.5em 0;
+	}
+	
+	thead {
+		background: none;
+				
+		tr {
+			background: none;
+			
+			th {
+				font-weight: bold;
+				text-align: left;
+				line-height: 140%;
+				.textShadowIndentLight;	
+				.bordered;
+				background: @baseColor;
+				padding: 0.7em;		
+			}
+			
+			td {
+				font-size: 80%;
+				background: none;
+			}
+		}
+	}
+	
+	tbody {
+
+		tr {
+			background: none;
+			.bordered;
+
+			td {
+				.bordered;
+				background: none;
+				padding: 0.7em;
+			}
+		}	
+		
+		th {
+			@secondaryColor;
+			background: none;
+		}
+	}
+}
+
+table tbody tr td {
+	color: @secondaryColor;
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- lists ----------------------------------------------- */
+
+ol {
+	line-height: 200%;
+	color: @secondaryColor;
+	margin: 0 0 0.8em 1.5em;
+	list-style: decimal;
+}
+
+ul {
+	line-height: 200%;
+	color: @secondaryColor;
+	margin: 0 0 0.8em 1.5em;
+	list-style: disc;
+}
+
+ul.links {
+	margin: 0;
+}
+
+ul.inline li {
+	padding: 0;
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- blockquotes ----------------------------------------------- */
+
+blockquote {
+	font-size: 130%;
+	line-height: 150%;
+	font-style: italic;
+	color: @primaryColorDark;
+	background: @tertiaryColorLight;
+	padding: 1em 2em 1em 2em;
+	margin: 2em 0;
+	border-left: 3px solid @secondaryColor;
+	.textShadowIndentLight;
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- images ----------------------------------------------- */
+
+img {
+	.bordered;
+	padding: 1px;
+}
+
+/* -------------------------------------------------------------- */
+
+
+/* -- form elements ----------------------------------------------- */
+
+/* -- global inputs -- */
+
+input[type="text"], input[type="password"], input[type="button"], input[type="submit"], input[type="search"], textarea, select, button {
+	text-shadow: 200%;
+	background: @baseColorLight;
+	.bordered;
+	padding: 0.4em 0.4em;
+	margin: 0 0.4em 0 0;
+}
+
+input#edit-subject.form-text.required, input#edit-mail.form-text.required, input#edit-name.form-text.required {
+	font-size: 100%;
+}
+
+input[type="text"]:hover, input[type="password"]:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="search"]:hover, textarea:hover, select:hover, button:hover {	
+	background: @tertiaryColorSuperLight;
+	.borderedHover;
+}		
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="button"]:focus, input[type="submit"]:focus, input[type="search"]:focus, textarea:hover, select:focus, button:focus {	
+	background: @baseColor;
+}		
+
+/* -------------- */
+
+/* -- buttons -- */
+
+input[type="submit"], input[type="button"], button {
+	font-size: 100%;
+	font-weight: bold;
+	.textShadowIndentLight;
+ 	color: @secondaryColorDark;
+	background: @baseColor;
+ 	border: 1px solid @secondaryColorLight;
+ 	.roundedCorners;
+	padding: 0.4em 0.6em;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, button:hover {
+	.textShadowIndentLight;
+ 	border: solid 1px @primaryColor;
+	background: @tertiaryColorSuperLight;
+	cursor: pointer;
+}
+
+input[type="submit"]:focus, input[type="button"]:focus, button:focus {
+	background: @tertiaryColor;
+ 	border: solid 1px @secondaryColorDark;
+}
+
+input[type="submit"]:active, input[type="button"]:active, button:active {
+	background: @tertiaryColorDark;
+ 	border: 1px solid @secondaryColorDark;
+}
+
+/* -------------- */
+
+/* -- input placeholder text -- */
+
+::-webkit-input-placeholder, :-moz-placeholder {
+   color: @secondaryColor;
+	.textShadowIndentLight;
+} 
+
+/* -------------- */
+
+/* -- textarea, fieldset, legend, select, label -- */
+
+textarea {
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow: auto;
+  font-size: 100%;
+}
+
+fieldset {
+	background: @baseColor;
+	.bordered;
+	padding: 0.4em 0.6em;
+  margin: 0 0 2em 0;
+}
+
+legend {
+	font-size: 140%;
+  font-weight: bold;
+  .textShadowIndentLight;
+	background: @baseColor;
+	.bordered;
+	padding: 0.8em 1em;
+  margin: 0 0 2em 0;
+}
+
+label {
+  padding: 0.4em 0.6em;
+}
+
+.form-item label {
+	padding: 0.8em 0em;
+}
+
+/* -------------- */
+
+/* -------------------------------------------------------------- */
+
+
