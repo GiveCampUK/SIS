@@ -11,6 +11,7 @@ a {
 		color:@baseColorLight;
 		background: @primaryColorDark;
 		text-decoration:none;
+		text-shadow: none;
 		}
 	&:active {
 		color:@primaryColorDark;
@@ -242,9 +243,9 @@ blockquote {
 	line-height: 150%;
 	font-style: italic;
 	color: @primaryColorDark;
-	background: @tertiaryColorLight;
+	background: @baseColor;
 	padding: 1em 2em 1em 2em;
-	margin: 2em 0;
+	margin: 1em 0;
 	border-left: 3px solid @secondaryColor;
 	.textShadowIndentLight;
 }
@@ -255,7 +256,6 @@ blockquote {
 /* -- images ----------------------------------------------- */
 
 img {
-	.bordered;
 	padding: 1px;
 }
 
@@ -315,7 +315,7 @@ input[type="submit"]:focus, input[type="button"]:focus, button:focus {
 }
 
 input[type="submit"]:active, input[type="button"]:active, button:active {
-	background: @tertiaryColorDark;
+	background: @baseColor;
  	border: 1px solid @secondaryColorDark;
 }
 
@@ -362,6 +362,10 @@ label {
 
 .form-item label {
 	padding: 0.8em 0em;
+}
+
+.resizable-textarea .grippie {
+	display: none;
 }
 
 /* -------------- */

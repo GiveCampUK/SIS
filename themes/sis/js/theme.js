@@ -17,6 +17,9 @@ window.sis = (function ($) {
         });
         
         $("#slideshow-play").click(methods.playPause);
+        $("#slideshow-controls button")
+          .css('opacity', 0.6)
+          .hover(methods.fadeButtonIn, methods.fadeButtonOut);
         
       }
     
@@ -35,7 +38,19 @@ window.sis = (function ($) {
         $this.addClass("paused");
         $(".region-slideshow").cycle("pause");
         
-      }  
+      }
+      
+    , fadeButtonIn: function () {
+      
+        $(this).stop().fadeTo(150, 1);
+        
+      }
+      
+    , fadeButtonOut: function () {
+        
+        $(this).stop().fadeTo(300, 0.6);
+        
+      }
     
   };
   

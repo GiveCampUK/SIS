@@ -77,17 +77,7 @@
 	        
 	      <section id="home-page-banner-wrap">
 	        
-	        <div class="slideshow-holder clearfix">
-	        
-	          <?php print render($page['slideshow']); ?>
-	        
-  	        <div id="slideshow-controls">
-              <button type="button" id="slideshow-prev"></button>
-              <button type="button" id="slideshow-play"></button>
-              <button type="button" id="slideshow-next"></button>
-            </div>
-          
-          </div>
+	        <?php print render($page['slideshow']); ?>
 	        
 	        <?php print render($page['home_page_banner']); ?>
 	

@@ -92,10 +92,39 @@ aside.main-sidebar {
 	
 		h2 {
 			background: url("@{base-url}/02body/bdrSection.png") bottom left repeat-x;
+			padding: 0 0 0.6em 0;
 		}
-	
-	}
+		
+		ul.menu {
+			margin: 0;
+		
+			li {
+				font-size: 150%;
+				background: url("@{base-url}/02body/iconArrow.png") left 4px no-repeat;
+				margin: 0 0 0.5em 0;				
+				padding: 0 0 0 1.45em;
+				
+				a {
+					margin-bottom: 0.5em;
+				}
 
+				ul {
+					margin: 0.75em 0 1em 0;
+					
+					li {
+						font-size: 100%;
+						margin: 0;					
+						background: url("@{base-url}/02body/iconArrow.png") left 10px no-repeat;
+					}
+				}
+			}		
+		}	
+	}
+}
+
+ul li.leaf, ul li.expanded, ul li.collapsed {
+	list-style-image: none;
+	list-style-type: none;
 }
 
 /* -------------------------------------------------------------- */
@@ -116,6 +145,7 @@ aside.main-sidebar {
 
 /* -- calendar ----------------------------------------------- */
 
+/* -- mini cal -- */
 .view-events-calendar {
 
 	.view-header {
@@ -136,7 +166,7 @@ aside.main-sidebar {
 					
 					span {
 						a {
-							font-size: 140%;
+							font-size: 100%;
 							padding-bottom: 0.5em;
 							padding-right: 0.25em;
 							&:hover {
@@ -155,7 +185,7 @@ aside.main-sidebar {
 					
 					span {
 						a {
-							font-size: 140%;
+							font-size: 100%;
 							padding-bottom: 0.5em;
 							padding-right: 0.25em;
 							margin-right: 0.4em;
@@ -172,17 +202,195 @@ aside.main-sidebar {
 }
 
 div.calendar-calendar div.month-view table.mini tr th {
-	font-size: 200%;
+	font-size: 120%;
 }
 
 table tbody tr div.month {
-	font-size: 160%;
+	font-size: 120%;
 }
 .calendar-calendar .mini-day-off {
 	padding: 3px 0;
 }
 .calendar-calendar tbody {
 	padding: 5px;
+}
+aside .view-events-calendar .view-header .date-nav-wrapper .date-nav .date-prev, aside .view-events-calendar .view-header .date-nav-wrapper .date-nav .date-next {
+	margin: 0;
+	margin-top: 1em;
+}
+
+/* -------------- */
+
+/* -- large cal -- */
+
+div.date-nav-wrapper .date-nav {
+	clear: none;
+	padding-bottom: 0.5em;
+}
+div.date-nav-wrapper.clearfix {
+	content: inherit;
+	display: inline;
+	clear: none;
+}
+
+.view-events-calendar {
+
+	.view-header {
+	
+		ul.calendar-links {
+		
+			li.calendar {
+			
+				a {
+					text-decoration: none;
+					background: @baseColor;
+					.roundedCorners;
+					margin: 0 0.25em 0 0;
+					padding: 0.5em;
+					&:hover {
+						background: @primaryColor;
+					}
+				}			
+			}
+		}
+	}
+}
+
+.view-events-calendar {
+
+.view-header {
+
+		.date-nav-wrapper {
+										
+			.date-nav {
+				
+				.date-prev {
+					background: none;
+					margin-top: 2em;
+					margin-right: 4em;
+					
+					span.prev {
+					
+						a {
+							font-weight: bold;
+							.roundedCorners;
+							background: @baseColor;
+							padding: 0.5em 0.75em;
+							&:hover {
+								color: @baseColorLight;
+								background: @primaryColor;
+							}
+						}
+					}
+				}
+				
+				.date-heading {
+					text-align: left;
+					margin-top: 1.2em;
+				}
+				
+				.date-next {
+					background: none;
+					margin-top: 2em;
+					margin-right: 0;
+					
+					a {
+						font-weight: bold;
+						.roundedCorners;
+						background: @baseColor;
+						margin-left: 2em;
+						padding: 0.5em 0.75em;
+						&:hover {
+							color: @baseColorLight;
+							background: @primaryColor;
+						}
+					}					
+				}
+			}
+		}
+	}
+}
+
+.view-events-calendar .view-header .date-nav-wrapper .date-nav .date-prev span.prev a {
+	color: @secondaryColorDark;
+	font-weight: bold;
+	.roundedCorners;
+	background: @baseColor;
+	margin-left: 2em;
+	padding: 0.5em 0.75em;
+	&:hover {
+		color: @baseColorLight;
+		background: @primaryColor;
+	}
+}
+
+.view-events-calendar .view-header .date-nav-wrapper .date-nav .date-next span.next a {
+	color: @secondaryColorDark;
+	font-weight: bold;
+	.roundedCorners;
+	background: @baseColor;
+	margin-left: 2em;
+	padding: 0.5em 0.75em;
+	&:hover {
+		color: @baseColorLight;
+		background: @primaryColor;
+	}
+}
+
+.view .date-nav-wrapper .date-heading {
+	width: 50%;
+	margin-bottom: 1.2em;
+}
+
+.calendar-calendar .month-view .full td.multi-day div.monthview, .calendar-calendar .week-view .full td.multi-day div.weekview, .calendar-calendar .day-view .full td.multi-day div.dayview {
+	color: @primaryColorDark;
+	background: @primaryColorLight;
+	height: 3em;
+}
+
+.calendar-calendar .month-view .full .inner .monthview, .calendar-calendar .week-view .full .inner .weekview, .calendar-calendar .day-view .full .inner .dayview {
+	-moz-border-radius: none;
+	-webkit-border-radius: none;
+	-o-border-radius: none;
+	border-radius: none;
+}
+
+td.multi-day .inner .item .view-item .calendar a {
+	font-size: 100%;
+	&:hover {
+		color: @primaryColorDark;
+	}
+}
+
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .continues, .calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff, .calendar-calendar .week-view .full td.multi-day .inner .weekview .continues, .calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
+	background: none;
+}
+
+/* -------------- */
+
+
+/* -------------------------------------------------------------- */
+
+
+/* -- error messages ----------------------------------------------- */
+
+#messages {
+	margin: 1em 0;
+
+	.messages {
+		.roundedCorners;
+		background-position: 8px 6px;
+		padding: 15px 15px 15px 45px;
+	}
+	
+	.error {
+		background-position: 10px 10px;	
+	}
+}
+
+.form-item input.error, .form-item textarea.error, .form-item select.error {
+	font-size: 100%;
+	border: 1px solid red;
 }
 
 /* -------------------------------------------------------------- */
@@ -201,6 +409,8 @@ ol.search-results {
 #search-form input#edit-submit {
 	margin: 1em 0 1em 0;
 }
+
+
 
 /* -------------------------------------------------------------- */
 

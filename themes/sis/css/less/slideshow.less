@@ -1,34 +1,63 @@
 #home-page-banner-wrap {
-	margin:0.5em 0 0 -20px;
-	padding:0 0 0.5em 20px;
-	position:relative;
-	.region-slideshow {
-		width:58%;
-		float:left;
-		}
+	margin:1em 0 0 -20px;
+	padding:0 0 1em 20px;
 	}
 	
 /* -- slideshow -- */
 
-.home-page-slide {
-  width: 100%;
-}
+.slideshow-holder {
+	position:relative;
+	float:left;
+	width:59%;
+	#slideshow-controls {
+		position:absolute;
+		bottom:0;
+		left:1px;
+		right:1px;
+		z-index:200;
+		background:#000000;
+		opacity:0.9;
+		background:rgba(0,0,0,0.9);
+		padding:10px;
+		font-size:70%;
+		button {
+			float:left;
+			display:block;
+			width:16px;
+			height:16px;
+			padding:0;
+			margin:0 6px 0 0;
+			}
+		#slideshow-prev {
+			background: url("@{base-url}04controls/media_controls_dark_rewind.png") no-repeat center center;
+			}
+		#slideshow-play {
+			background: url("@{base-url}04controls/media_controls_dark_pause.png") no-repeat center center;
+			}
+		#slideshow-play.paused {
+			background: url("@{base-url}04controls/media_controls_dark_play.png") no-repeat center center;
+			}
+		#slideshow-next {
+			background: url("@{base-url}04controls/media_controls_dark_forward.png") no-repeat center center;
+			}
+		}
+	}
 	
 .region-slideshow {
 	overflow-x:visible;
 	border:solid 1px #CCCCCC;
-	.home-page-slide {
+	.slideshow-slides {
 		overflow-x:visible;
-		//overflow-y:hidden;
-		height:350px;
+		height:340px;
 		width: 100%;
 		padding:0 0 1px 0;
 		.slide-image {
 			overflow:hidden;
-			height:350px;
+			height:340px;
+			width:100%;
 			img {
-				width:auto;
-				height:100%;
+				width:100%;
+				height:auto;
 				border:none;
 				}
 			}
@@ -39,10 +68,10 @@
 		background: url("@{base-url}02body/ribbonBannerBg.png") repeat-x top left;
 		position:absolute;
 		margin:0.8em 40px 0 -2px;
-		padding:0.3em 1em 0 0;
+		padding:0.35em 1em 0 0;
 		min-height:38px;
 		z-index:200;
-		font-size:135%;
+		font-size:125%;
 		font-weight:bold;
 		color:#FFFFFF;
 		text-shadow:0 -1px 1px darken(@primaryColor,30%);
@@ -51,7 +80,7 @@
 			position:absolute;
 			display:block;
 			top:0;
-			left:-20px;
+			left:-19px;
 			width:20px;
 			height:49px;
 			}
@@ -65,22 +94,13 @@
 			height:38px;
     		}
     	}
-    	
-#slideshow-controls {
-	position:absolute;
-	bottom:10px;
-	left:10px;
-	input[type="button"]#slideshow-prev {}
-	input[type="button"]#slideshow-play {}
-	input[type="button"]#slideshow-next {}
-	}
 	
 .region-home-page-banner {
-	width:40%;
+	width:38%;
 	margin:0 0 0 1%;
 	border:1px solid #CCCCCC;
 	border-bottom:none;
-	float:left;
+	float:right;
 	#language-list {
 		padding:0;
 		margin:0;

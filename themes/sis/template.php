@@ -4,6 +4,8 @@
     
     $theme_path = drupal_get_path('theme', 'sis');
     
+    $vars['theme_path'] = $theme_path;
+    
     // google fonts    
     drupal_add_css(
 		    'http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700|Merriweather:400,700,900,300'

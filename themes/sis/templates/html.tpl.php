@@ -1,13 +1,24 @@
 <!doctype html>
-<html lang="en">
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
 
-	<head>
-	  
-	  <meta charset="utf-8">
-	  
-	  <title><?php print $head_title; ?></title>
-	 
-	 <?php
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title><?php print $head_title; ?></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <script src="<?php print $theme_path; ?>/js/modernizr-2.0.6.min.js"></script>
+	
+	<?php
 	  
 	  // all stylesheets (themes, modules...)
 	  print $styles;
